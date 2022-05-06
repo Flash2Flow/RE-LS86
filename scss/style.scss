@@ -3,12 +3,54 @@
 @import '_fonts';
 @import '_media';
 
+@keyframes leftStart{
+    0%{
+        margin-left: -200px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+@keyframes opac{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
 body{
     background-color: #311432;
     height: 100%;
 }
 a{
     text-decoration: none;
+}
+input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+}
+input[type=text]{
+    text-align: center;
+    @include BoldDownFonts;
+    font-size: 15px;
+    color: black;
+}
+input[type=password]{
+    text-align: center;
+    @include BoldDownFonts;
+    font-size: 15px;
+    color: black;
+}
+input[type=email]{
+    text-align: center;
+    @include BoldDownFonts;
+    font-size: 15px;
+    color: black;
 }
 
 //header
@@ -54,7 +96,7 @@ a{
     transition: .2s ease;
 }
 .menu_nav:hover{
-    color:#7331FF;
+   color: #7331FF;
 }
 
 //section
@@ -261,4 +303,189 @@ a{
     @include BoldUpFonts;
     font-size: 20px;
     text-align: center;
+}
+
+//модульные окна
+.block_container{
+    margin: 0 auto;
+    width: 250px;
+}
+.block_join{
+    display: none;
+    width: 876px;
+    height: 600px;
+    background: #311432;
+    box-shadow: 0 4px 15px 0 rgb(49 2+0 50 / 20%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.block_flex{
+    display: flex;
+}
+.block_image_project{
+    z-index: 10;
+    background-position: center;
+    background-repeat: none;
+    background-image: url(../assets/auth.jpg);
+    width: 438px;
+    height: 600px;
+}
+.block_auth{
+    width: 438px;
+    height: 600px;
+}
+.auth_name{
+    @include BoldUpFonts;
+    color: white;
+}
+.down_name{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    width: 250px;
+}
+.name_block_auth{
+    margin-top: 90px;
+    text-align: center;
+    //animation: leftStart 0.8s infinite alternate;
+    animation-duration: 2s;
+    animation-name: leftStart;
+}
+.name_block_down{
+    margin-bottom: 85px;
+    animation-duration: 2s;
+    animation-name: leftStart;
+}
+.inputs_block{
+    margin-top: 100px;
+}
+.block_input_login{
+    margin-bottom: 30px;
+}
+.login_input{
+    animation-duration: 2s;
+    animation-name: leftStart;
+}
+.password_input{
+    animation-duration: 2s;
+    animation-name: leftStart;
+}
+.btn_login_account{
+    margin-top: 86px;
+}
+.btn_login{
+    margin-top: 6px;
+    border-radius: 59px;
+    @include BtnFontsHover;
+    width: 232px;
+    margin-left: 10px;
+    padding: 10px 0px 10px 0px;
+    border: none;
+    background-color: #1ed760;
+    transition: .2s ease;
+    animation-duration: 2s;
+    animation-name: opac;
+}
+.btn_login:hover{
+    color: white;
+    background-color: #7331FF;
+}
+
+//block-created
+
+.block_created{
+    display: none;
+    width: 876px;
+    height: 600px;
+    background: #311432;
+    box-shadow: 0 4px 15px 0 rgb(49 2+0 50 / 20%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.block_reg{
+    width: 438px;
+    height: 600px;
+}
+.name_block_down_created{
+    margin-bottom: 58px;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: leftStart;
+    animation-name: leftStart;
+}
+.name_block_auth_created{
+    margin-top: 49px;
+    text-align: center;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: leftStart;
+    animation-name: leftStart;
+}
+.block_input_login_created{
+    margin-bottom: 30px;
+}
+.block_input_email_created{
+    margin-bottom: 30px;
+}
+.block_input_password_created{
+    margin-bottom: 30px;
+}
+.btn_login_account_created{
+    margin-top: 65px;
+}
+.btn_login_created{
+    margin-top: 6px;
+    border-radius: 59px;
+    font-family: "Inter",sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 17px;
+    width: 232px;
+    margin-left: 10px;
+    padding: 10px 0px 10px 0px;
+    border: none;
+    background-color: #1ed760;
+    transition: .2s ease;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: opac;
+    animation-name: opac;
+}
+.new_account{
+    text-align: center;
+}
+.created-account{
+    @include BoldDownFonts;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.accepted{
+    display: none;
+    width: 221px;
+    height: 68px;
+    background-color: #7331FF;
+    box-shadow: 0 0px 15px 0 rgb(115 49 255);
+    border-radius: 108px;
+    position: absolute;
+    top: 90%;
+    left: 43%;
+    z-index: 1000;
+}
+.accepted-block-name{
+    @include BoldDownFonts;
+    font-size: 15px;
+    padding-top: 25px;
+}
+.accepted-name{
+    text-align: center;
+}
+.otstup{
+    margin-left: 10px;
 }
