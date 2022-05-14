@@ -10,9 +10,22 @@ new TypeIt("#section_name_project", {
 
 
 
-$('#active_block_join').on('click', function(){
+$('#active_block_join_one').on('click', function(){
     $('#block_join').show();
+    $('#burger-menu').hide();
     return false;
+})
+$('#close-menu').on('click', function(){
+  $('#burger-menu').hide();
+  return false;
+})
+$('#active_block_join_two').on('click', function(){
+  $('#block_join').show();
+  return false;
+})
+$('#burger-button').on('click', function(){
+  $('#burger-menu').show();
+  return false;
 })
 $('#reg').on('click', function(){
   $('#block_created').show();
@@ -23,6 +36,11 @@ $('#reg').on('click', function(){
 $(document).click( function(event){
     if( $(event.target).closest("#block_join").length ) return;
     $("#block_join").hide(300);
+    event.stopPropagation();
+  });
+  $(document).click( function(event){
+    if( $(event.target).closest("#burger-menu").length ) return;
+    $("#burger-menu").hide();
     event.stopPropagation();
   });
   $(document).click( function(event){

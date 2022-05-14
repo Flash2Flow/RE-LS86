@@ -656,145 +656,96 @@ input[type=email]{
 }
 
 // === ADAPTIVE === //
-@media screen and (max-width: 320px){
-    .block-error{
-        display: none;
-    }
-    .menu{
-        display: none;
-    }
-    .block_image{
-        display: none !important;
-    }
-    .size-bas{
-        display: none !important;
-    }
-    .block_img_welcom{
-        display: none !important;
-    }
-    .about_text {
-        font-family: "Inter",sans-serif;
-        font-weight: 700;
-        color: #fff;
-        font-size: 20px;
-        font-weight: 400;
-        width: 307px !important;
-        margin-bottom: 65px;
-    }
-    .header_online{
-        display: none;
-    }
-    .burger-button {
-        float: right;
-        margin-top: -35px;
-    }
-    .section_name_project{
-        margin-top: 70px;
-        font-family: "Inter",sans-serif;
-        font-weight: 700;
-        font-size: 30px;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 50px;
-        text-align: center;
-    }
-    .block-link-btn{
-        text-align: center;
-    }
-    .text_one{
-        text-align: center;
-    }
-    .about_project{
-        margin-top: 5px;
-        text-align: center;
-    }
-    .section_who_game{
-        margin-top: 100px;
-    }
-    .create_account{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .join_game_name{
-        font-size: 32px;
-    }
-    .rule_server_name{
-        font-size: 31px;
-    }
-    .section_block{
-        margin-bottom: 66px;
+@media screen and (max-width: 2560px){
+    .burger-button{
+        display: none ;
     }
 }
-@media screen and (max-width: 375px){
+@media screen and (min-width: 1024px){
     .block-error{
         display: none ;
     }
-    .menu{
-        display: none;
-    }
-    .block_image{
-        display: none !important;
-    }
     .size-bas{
-        display: none !important;
+        margin-left: -74px;
     }
-    .block_img_welcom{
-        display: none !important;
-    }
-    .about_text {
-        font-family: "Inter",sans-serif;
-        font-weight: 700;
-        color: #fff;
-        font-size: 20px;
-        font-weight: 400;
-        width: 358px !important;
-        margin-bottom: 65px;
-    }
-    .header_online{
-        display: none;
-    }
-    .block-link-btn{
-        text-align: center;
-    }
-    .burger-button {
-        float: right;
-        margin-top: -35px;
-    }
-    .section_name_project{
-        margin-top: 70px;
-        font-family: "Inter",sans-serif;
-        font-weight: 700;
-        font-size: 30px;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 50px;
-        text-align: center;
-    }
-    .text_one{
-        text-align: center;
-    }
-    .about_project{
-        margin-top: 5px;
-        text-align: center;
-    }
-    .section_who_game{
-        margin-top: 100px;
-    }
-    .create_account{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .join_game_name{
-        font-size: 32px;
-    }
-    .rule_server_name{
-        font-size: 31px;
-    }
-    .section_block{
-        margin-bottom: 66px;
+}
+@media screen and (max-width: 768px){
+    .block-error{
+        display: block ;
     }
 }
 @media screen and (max-width: 425px){
+    .block_reg {
+        width: 890px;
+        height: 600px;
+    }
+    .accepted {
+        display: flex;
+        position: fixed;
+        top: 90%;
+        left: 18%;
+        z-index: 1000;
+    }
+    .no-accepted {
+        display: flex;
+        position: fixed;
+        top: 90%;
+        left: 18%;
+        z-index: 1000;
+    }
+    .menu_nav:hover{
+        color: #412877;
+    }
+    .block_join {
+        display: none;
+        width: 423px;
+        height: 600px;
+        background: #311432;
+        box-shadow: 0 4px 15px 0 rgb(49 2 50 / 20%);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .block_flex{
+        display: block;
+    }
+    .block_image_project{
+        display: none;
+    }
+    .block_social{
+        margin-top: 400px;
+    }
+    .close-menu{
+        text-align: end;
+        margin-right: 20px;
+        margin-top: 20px;
+        @include RegularDownFonts;
+    }
+    .burger-menu-open-nav{
+        @include RegularDownFonts;
+        display: block;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .burger-menu {
+        display: none;
+        width: 230px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        background-color: #7331ff;
+        right: 0;
+        z-index: 100;
+        -webkit-animation-duration: .2s;
+    animation-duration: .2s;
+    -webkit-animation-name: widthFullRight;
+    animation-name: widthFullRight;
+    }
+    .burger-button{
+        display: block;
+    }
     .block-error{
         display: none !important;
     }
@@ -866,21 +817,141 @@ input[type=email]{
         display: none;
     }
 }
-@media screen and (max-width: 768px){
-    .block-error{
-        display: block ;
-    }
-}
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 375px){
     .block-error{
         display: none ;
+    }
+    .menu{
+        display: none;
+    }
+    .block_image{
+        display: none !important;
     }
     .size-bas{
-        margin-left: -74px;
+        display: none !important;
+    }
+    .block_img_welcom{
+        display: none !important;
+    }
+    .about_text {
+        font-family: "Inter",sans-serif;
+        font-weight: 700;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        width: 358px !important;
+        margin-bottom: 65px;
+    }
+    .header_online{
+        display: none;
+    }
+    .block-link-btn{
+        text-align: center;
+    }
+    .burger-button {
+        float: right;
+        margin-top: -35px;
+    }
+    .section_name_project{
+        margin-top: 70px;
+        font-family: "Inter",sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 50px;
+        text-align: center;
+    }
+    .text_one{
+        text-align: center;
+    }
+    .about_project{
+        margin-top: 5px;
+        text-align: center;
+    }
+    .section_who_game{
+        margin-top: 100px;
+    }
+    .create_account{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .join_game_name{
+        font-size: 32px;
+    }
+    .rule_server_name{
+        font-size: 31px;
+    }
+    .section_block{
+        margin-bottom: 66px;
     }
 }
-@media screen and (max-width: 2560px){
-    .burger-button{
-        display: none ;
+@media screen and (max-width: 320px){
+    .block-error{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .block_image{
+        display: none !important;
+    }
+    .size-bas{
+        display: none !important;
+    }
+    .block_img_welcom{
+        display: none !important;
+    }
+    .about_text {
+        font-family: "Inter",sans-serif;
+        font-weight: 700;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        width: 307px !important;
+        margin-bottom: 65px;
+    }
+    .header_online{
+        display: none;
+    }
+    .burger-button {
+        float: right;
+        margin-top: -35px;
+    }
+    .section_name_project{
+        margin-top: 70px;
+        font-family: "Inter",sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 50px;
+        text-align: center;
+    }
+    .block-link-btn{
+        text-align: center;
+    }
+    .text_one{
+        text-align: center;
+    }
+    .about_project{
+        margin-top: 5px;
+        text-align: center;
+    }
+    .section_who_game{
+        margin-top: 100px;
+    }
+    .create_account{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .join_game_name{
+        font-size: 32px;
+    }
+    .rule_server_name{
+        font-size: 31px;
+    }
+    .section_block{
+        margin-bottom: 66px;
     }
 }
