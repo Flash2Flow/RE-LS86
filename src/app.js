@@ -33,9 +33,30 @@ $(document).click( function(event){
 
   
     $('#various-actions').click(function(){
-      $('#accepted').show(200).delay(3000).slideUp(300);
+      $('#no-accepted-block').show(200).delay(3000).slideUp(1000);
+      //$('#accepted').show(200).delay(3000).slideUp(1000);
     });
 
     function dev(){
       alert('В разработке, чё лезешь то?');
     }
+
+window.addEventListener('scroll',function(){
+  const scroll = window.scrollY;
+
+  if(scrollY >= 777){
+    $('location').ready(
+      function(){
+        $('#block_image').animate({
+          "margin-left": "0",
+          "opacity": "1"
+        }, 1000);
+
+        $('#about_project').animate({
+          "opacity": "1"
+        },1000);
+      }
+    )
+  };
+
+});

@@ -16,16 +16,61 @@
 </head>
 <body>
 
+    <!-- ==== ERROR ==== -->
+    <div class="block-error">
+        <div class="block-error-name">
+            <h1 class="name-error">Планшетное разрешение пока что не доступно!</h1>
+        </div>
+    </div>
+
+
+
     <!-- === block accept and not accepted login === -->
-        <div class="accepted" id="accepted">
-            <div class="accepted-name">
-                <h4 class="accepted-block-name">Вы авторизовались<i class="fa-solid fa-check otstup"></i></h4>
+    <div id="accepted">
+        <div class="accepted">
+            <div class="accepted-name-icon" id="accepted-name-icon">
+               <i class="fa-solid fa-check style-icon"></i>
+            </div>
+            <div class="accepted-name" id="accepted-name">
+                <h4 class="accepted-block-name">Вы авторизовались</h4>
+            </div>
+        </div>
+    </div>
+
+        <div id="no-accepted-block">
+            <div class="no-accepted">
+                <div class="no-accepted-name-icon" id="no-accepted-name-icon">
+                    <i class="fa-solid fa-exclamation no-style-icon"></i>
+                </div>
+                <div class="no-accepted-name" id="no-ccepted-name">
+                    <h4 class="no-accepted-block-name">Не верные данные</h4>
+                </div>
             </div>
         </div>
 
 
     <!-- === block accept and not accepted registration === -->
+    <div id="accepted-registration">
+        <div class="accepted">
+            <div class="accepted-name-icon" id="accepted-name-icon">
+               <i class="fa-solid fa-check style-icon"></i>
+            </div>
+            <div class="accepted-name" id="accepted-name">
+                <h4 class="accepted-block-name">Вы зарегистрировались</h4>
+            </div>
+        </div>
+    </div>
 
+        <div id="no-accepted-block-registration">
+            <div class="no-accepted">
+                <div class="no-accepted-name-icon" id="no-accepted-name-icon">
+                    <i class="fa-solid fa-exclamation no-style-icon"></i>
+                </div>
+                <div class="no-accepted-name" id="no-ccepted-name">
+                    <h4 class="no-accepted-block-name">Поля не заполнены</h4>
+                </div>
+            </div>
+        </div>
 
 
     <div class="block_join" id="block_join">
@@ -103,6 +148,18 @@
 </div>
 </div>
 
+    <!-- ==== burger-menu ==== -->
+    <div class="burger-menu" id="burger-menu">
+        <div class="burger-container">
+            
+        </div>
+    </div>
+    <!-- ==== /burger-menu ==== -->
+
+
+
+
+
     <!--Основная структура DOM-элементов-->
     <header class="header">
         <div class="container">
@@ -120,6 +177,15 @@
                 </div>
                 <div class="offset-md-2 col-md-5">
                     <div class="header_menu">
+
+                        <!-- ==== burger-button ==== -->
+                        <div class="burger-button" id="burger-button">
+                            <div class="burger-line-one"></div>
+                            <div class="burger-line-two"></div>
+                            <div class="burger-line-three"></div>
+                        </div>
+                        <!-- /==== burger-button ==== -->
+
                         <ul class="menu">
                             <a href="#"><li class="menu_nav"onclick="dev()">Правила</li></a>
                             <a href="#"><li class="menu_nav"onclick="dev()">Форум</li></a>
@@ -148,7 +214,9 @@
                             только!
                         </p>
                     </div>
-                    <a href="#section_who_game" class="btn" id="">НАЧАТЬ ИГРАТЬ!</a>
+                    <div class="block-link-btn">
+                        <a href="#section_who_game" class="btn" id="">НАЧАТЬ ИГРАТЬ!</a>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="block_img_welcom">
@@ -163,12 +231,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="block_image">
+                    <div class="block_image" id="block_image">
                         <img src="./assets/bas.png" class="size-bas">
                     </div>
                 </div>
                 <div class="offset-md-1 col-md-7">
-                    <div class="about_project">
+                    <div class="about_project" id="about_project">
                         <h1 class="about_name">о нас!</h1>
                         <p class="about_text" id="about_text">
                             Los Santos 86 - это UCP проект на
@@ -196,7 +264,7 @@
                     <div class="rule_server">
                         <h5 class="rule_server_name">правила сервера</h5>
                         <div class="block_btn_one">
-                            <a href="#" class="click_rule" onclick="dev()">прочитать правила!</a>
+                            <a href="#" class="click_rule" onclick="dev()">правила!</a>
                         </div>
                     </div>
                 </div>
