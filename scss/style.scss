@@ -237,6 +237,13 @@ input[type=email]{
     width: 100%;
     height: 400px;
     background-color: #fff;
+    transition: .1s ease;
+}
+.rule_server:hover{
+    background-image: url(../assets/rules_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 416px;
 }
 .rule_server_name{
     padding-top: 150px;
@@ -270,6 +277,13 @@ input[type=email]{
     width: 100%;
     height: 400px;
     background-color: #fff;
+    transition: .1s ease;
+}
+.create_account:hover{
+    background-image: url(../assets/hover_created.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 416px;
 }
 .create_account_name{
     padding-top: 150px;
@@ -303,6 +317,13 @@ input[type=email]{
     width: 100%;
     height: 400px;
     background-color: #fff;
+    transition: .2s ease;
+}
+.join_game:hover{
+    background-image: url(../assets/join_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 416px;
 }
 .join_game_name{
     padding-top: 150px;
@@ -368,7 +389,7 @@ input[type=email]{
     width: 876px;
     height: 600px;
     background: #311432;
-    box-shadow: 0 4px 15px 0 rgb(49 2+0 50 / 20%);
+    box-shadow: 0 4px 15px 0 rgb(0 0 0);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -458,7 +479,7 @@ input[type=email]{
     width: 876px;
     height: 600px;
     background: #311432;
-    box-shadow: 0 4px 15px 0 rgb(49 2+0 50 / 20%);
+    box-shadow: 0 4px 15px 0 rgb(0 0 0);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -700,9 +721,21 @@ input[type=email]{
     .block_join {
         display: none;
         width: 423px;
-        height: 600px;
+        height: 770px;
         background: #311432;
         box-shadow: 0 4px 15px 0 rgb(49 2 50 / 20%);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .block_created {
+        display: none;
+        width: 876px;
+        height: 768px;
+        background: #311432;
+        box-shadow: 0 4px 15px 0 #000;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -768,7 +801,7 @@ input[type=email]{
         color: #fff;
         font-size: 20px;
         font-weight: 400;
-        width: 366px;
+        width: 400px;
         margin-bottom: 65px;
     }
     .header_online{

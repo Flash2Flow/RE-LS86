@@ -1,7 +1,8 @@
-new TypeIt("#section_name_project", {
+  new TypeIt("#section_name_project", {
     //strings: ["los santos 86"],
     speed: 90,
     waitUntilVisible: true,
+    cursor: false,
   })
   .type("SW PROJECT :D",{delay:300})
   .delete(13)
@@ -14,6 +15,14 @@ $('#active_block_join_one').on('click', function(){
     $('#block_join').show();
     $('#burger-menu').hide();
     return false;
+})
+$('#close-menu-auth').on('click', function(){
+  $('#block_join').hide();
+  return false;
+})
+$('#close-menu-reg').on('click', function(){
+  $('#block_created').hide();
+  return false;
 })
 $('#close-menu').on('click', function(){
   $('#burger-menu').hide();
@@ -62,19 +71,18 @@ $(document).click( function(event){
 window.addEventListener('scroll',function(){
   const scroll = window.scrollY;
 
-  if(scrollY >= 777){
+  if(scrollY >= 222){
     $('location').ready(
       function(){
         $('#block_image').animate({
           "margin-left": "0",
           "opacity": "1"
-        }, 1000);
+        }, 800);
 
         $('#about_project').animate({
           "opacity": "1"
-        },1000);
+        },800);
       }
     )
   };
-
 });
