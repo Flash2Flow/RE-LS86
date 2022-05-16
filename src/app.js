@@ -13,6 +13,7 @@
 
 $('#active_block_join_one').on('click', function(){
     $('#block_join').show();
+    $('#close-menu-auth').show();
     $('#burger-menu').hide();
     return false;
 })

@@ -96,6 +96,13 @@ input[type=email]{
     color: black;
 }
 
+#close-menu-reg{
+    display: none;
+}
+#close-menu-auth{
+    display: none;
+}
+
 //header
 .header{
     margin-top: 20px;
@@ -752,6 +759,7 @@ input[type=email]{
         margin-top: 300px;
     }
     .close-menu{
+        display: block !important;
         text-align: end;
         margin-right: 20px;
         margin-top: 20px;
