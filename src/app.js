@@ -1,15 +1,12 @@
-  new TypeIt("#section_name_project", {
+  const print = new TypeIt("#section_name_project", {
     //strings: ["los santos 86"],
     speed: 90,
     waitUntilVisible: true,
-    cursor: false,
+    cursorSpeed: 10000000000
   })
-  .type("SW PROJECT :D",{delay:300})
-  .delete(13)
   .type("los santos 86")
+  .pause(500)
   .go();
-
-
 
 $('#active_block_join_one').on('click', function(){
     $('#block_join').show();

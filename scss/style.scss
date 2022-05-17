@@ -704,6 +704,14 @@ input[type=email]{
     }
 }
 @media screen and (max-width: 425px){
+    .name_block_auth {
+        margin-top: 60px;
+        text-align: center;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-name: leftStart;
+        animation-name: leftStart;
+    }
     .block_reg {
         width: 890px;
         height: 600px;
@@ -762,7 +770,7 @@ input[type=email]{
         display: block !important;
         text-align: end;
         margin-right: 20px;
-        margin-top: 20px;
+        margin-top: 79px;
         @include RegularDownFonts;
     }
     .burger-menu-open-nav{
@@ -859,7 +867,7 @@ input[type=email]{
         display: none;
     }
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 376px){
     .block-error{
         display: none ;
     }
