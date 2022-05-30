@@ -3,6 +3,17 @@
 @import '_fonts';
 @import '_media';
 
+@keyframes downToUp {
+    0%{
+        height: 0px;
+        opacity: 0;
+    }
+    100%{
+        height: 260px;
+        opacity: 1;
+    }
+}
+
 @keyframes widthFullRight{
     0%{
         opacity: 0%;
@@ -100,6 +111,15 @@ input[type=email]{
     display: none;
 }
 #close-menu-auth{
+    display: none;
+}
+#up-block-rule-server{
+    display: none;
+}
+#up-block-rule-created{
+    display: none;
+}
+#up-block-rule-join{
     display: none;
 }
 
@@ -254,7 +274,7 @@ input[type=email]{
 }
 .rule_server_name{
     padding-top: 150px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     @include BoldUpFonts;
     text-align: center;
 }
@@ -265,6 +285,7 @@ input[type=email]{
     padding: 15px 20px;
     background-color: white;
     @include BtnFonts;
+    border: none;
     transition: .2s ease;
     text-decoration: none;
     text-transform: uppercase;
@@ -294,7 +315,7 @@ input[type=email]{
 }
 .create_account_name{
     padding-top: 150px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     @include BoldUpFonts;
     text-align: center;
 }
@@ -305,6 +326,7 @@ input[type=email]{
     padding: 15px 20px;
     background-color: white;
     @include BtnFonts;
+    border:none;
     transition: .2s ease;
     text-decoration: none;
     text-transform: uppercase;
@@ -334,7 +356,7 @@ input[type=email]{
 }
 .join_game_name{
     padding-top: 150px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     @include BoldUpFonts;
     text-align: center;
 }
@@ -345,6 +367,7 @@ input[type=email]{
     padding: 15px 20px;
     background-color: white;
     @include BtnFonts;
+    border: none;
     transition: .2s ease;
     text-decoration: none;
     text-transform: uppercase;
@@ -684,6 +707,71 @@ input[type=email]{
     margin-top: 15px;
 }
 
+.up-block{
+    width: 100%;
+    height: 260px;
+    position: fixed;
+    background-color: #311432;
+    z-index: 200;
+    bottom: 0;
+    box-shadow: -1px 0px 15px 0 rgb(0 0 0);
+    animation-name: downToUp;
+    animation-duration: .8s;
+}
+.text-block-server{
+    @include BoldDownFonts;
+    font-size: 20px;
+}
+.name-block-rule-server{
+    @include BoldUpFonts;
+}
+.name-block{
+    margin-top: 20px;
+}
+.btn-block{
+    float: right;
+    margin-top: 35px;
+}
+.btn-server{
+    padding: 15px 20px;
+    background-color: #fff;
+    font-family: "Inter",sans-serif;
+    font-weight: 700;
+    color: #000;
+    font-size: 20px;
+    transition: .2s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.btn-server:hover{
+    color: white;
+    background-color: #7331FF;
+}
+.flex-block{
+    display: flex;
+    justify-content: space-between;
+}
+.close-block{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+.button-close-game{
+    color: black;
+    transition: .2s ease;
+    cursor: pointer;
+}
+.button-close-game:hover{
+    color:#e91429; 
+}
+.text-block{
+    margin-top: 5px;
+}
+
+
 // === ADAPTIVE === /
 @media screen and (max-width: 2560px){
     .burger-button{
@@ -704,6 +792,19 @@ input[type=email]{
     }
 }
 @media screen and (max-width: 425px){
+    @keyframes downToUp {
+        0%{
+            height: 0px;
+            opacity: 0;
+        }
+        100%{
+            height: 420px;
+            opacity: 1;
+        }
+    }
+    .up-block{
+        height: 420px;
+    }
     .name_block_auth {
         margin-top: 60px;
         text-align: center;

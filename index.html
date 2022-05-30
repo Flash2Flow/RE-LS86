@@ -23,7 +23,63 @@
         </div>
     </div>
 
+    <!-- ==== who game blok`s opacity ==== -->
+    <div class="up-block" id="up-block-rule-server">
+        <div class="container">
+            <div class="flex-block">
+                <div class="name-block">
+                    <h3 class="name-block-rule-server">#ПРАВИЛА СЕРВЕРА</h3>
+                </div>
+                <div class="close-block">
+                    <h3 class="button-close-game" id="close-rule-server">X</h3>
+                </div>
+            </div>
+            <div class="text-block">
+                <p class="text-block-server">В правилах на нашем сервере, вы можете ознакомиться с их пунктами и придерживаться им. Также рекомендую перед началом игры/регистрации аккаунта ознакомиться с ними.</p>
+            </div>
+            <div class="btn-block">
+                <a href="#" class="btn-server" onclick="dev()">ПРОЧИТАТЬ!</a>
+            </div>
+        </div>
+    </div>
 
+    <div class="up-block" id="up-block-rule-created">
+        <div class="container">
+            <div class="flex-block">
+                <div class="name-block">
+                    <h3 class="name-block-rule-server">#СОЗДАТЬ АККАУНТ</h3>
+                </div>
+                <div class="close-block">
+                    <h3 class="button-close-game" id="close-created-server">X</h3>
+                </div>
+            </div>
+            <div class="text-block">
+                <p class="text-block-server">Перед создание аккаунта, мы настоятельно рекомендуем прочесть правила игрового режима на сервере. Когда ознакомились с правилами, нажимайте на кнопку создать и пройдите UCP тест, для подтверждения ваших навыков и познаний в ролевых ситуациях.</p>
+            </div>
+            <div class="btn-block">
+                <a href="#" class="btn-server" onclick="dev()">СОЗДАТЬ!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="up-block" id="up-block-rule-join">
+        <div class="container">
+            <div class="flex-block">
+                <div class="name-block">
+                    <h3 class="name-block-rule-server">#ЗАЙТИ НА СЕРВЕР</h3>
+                </div>
+                <div class="close-block">
+                    <h3 class="button-close-game" id="close-join-server">X</h3>
+                </div>
+            </div>
+            <div class="text-block">
+                <p class="text-block-server">После всех предыдущих действий, вы можете скопировать IP сервера и присоединиться на сервер.<br>IP:12.0.0:3000</p>
+            </div>
+            <div class="btn-block">
+                <a href="#" class="btn-server" onclick="dev()">ЗАЙТИ!</a>
+            </div>
+        </div>
+    </div>
 
     <!-- === block accept and not accepted login === -->
     <div id="accepted">
@@ -262,7 +318,7 @@
                     <div class="about_project" id="about_project">
                         <h1 class="about_name">о нас!</h1>
                         <div class="block_fucking_text">
-                            <h1 class="about_text" id="about_text">
+                            <p class="about_text" id="about_text">
                                 Los Santos 86 - это UCP проект на
                                 платформе SA:MP 0.3.7, который
                                 позволит будущим игрокам
@@ -272,7 +328,7 @@
                                 начинающих IT-шников из гаража или
                                 коммерсантов, музыкантов или реднеков
                                 в Лос-Сантосе.
-                            </h1>
+                            </p>
                         </div>
                         <a href="#" class="read_lore"onclick="dev()">ПРОЧИТАТЬ ЛОР!</a>
                     </div>
@@ -289,7 +345,7 @@
                     <div class="rule_server">
                         <h5 class="rule_server_name">правила сервера</h5>
                         <div class="block_btn_one">
-                            <a href="#" class="click_rule" onclick="dev()">правила!</a>
+                            <button type="button" class="click_rule" id="click_rule">подробнее!</button>
                         </div>
                     </div>
                 </div>
@@ -297,7 +353,7 @@
                     <div class="create_account">
                         <h5 class="create_account_name">создать аккаунт</h5>
                         <div class="block_btn_two">
-                            <a href="#" class="click_create"onclick="dev()">перейти!</a>
+                            <button class="click_create" id="click_create">подробнее!</button>
                         </div>
                     </div>
                 </div>
@@ -305,7 +361,7 @@
                     <div class="join_game">
                         <h5 class="join_game_name">зайти на сервер</h5>
                         <div class="block_btn_three">
-                            <a href="#" class="click_join"onclick="dev()">зайти!</a>
+                            <button class="click_join" id="click_join">подробнее!</button>
                         </div>
                     </div>
                 </div>
