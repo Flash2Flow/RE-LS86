@@ -1,3 +1,6 @@
+  document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+
   const print = new TypeIt("#section_name_project", {
     //strings: ["los santos 86"],
     speed: 90,
@@ -110,3 +113,7 @@ window.addEventListener('scroll',function(){
     )
   };
 });
+
+
+
+})
