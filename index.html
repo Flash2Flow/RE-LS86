@@ -188,23 +188,30 @@
             <div class="name_block_down_created">
                 <h5 class="down_name">Для создания аккаунта, заполните следующие поля.</h5>
             </div>
-            <form class="inputs_block_reg">
+
+            <form class="inputs_block_reg" id="form">
+
                 <div class="block_input_login_created">
-                    <input type="text" name="login" class="login_input" placeholder="Введите ваш логин">
+                    <input type="text" id="login" name="login" onkeyup="return proverka(this);" maxlength="10" class="login_input" placeholder="Введите ваш логин">
                 </div>
+
                 <div class="block_input_email_created">
-                    <input type="email" name="email" class="login_input" placeholder="Введите ваш email">
+                    <input type="email" id="email" name="email" onkeyup="return proverka(this);" class="login_input" placeholder="Введите ваш email">
                 </div>
+
                 <div class="block_input_password_created">
-                    <input type="password" name="password" class="password_input" placeholder="Введите ваш пароль">
+                    <input type="password" id="password" name="password" onkeyup="return proverka(this);" maxlength="10" class="password_input" placeholder="Введите ваш пароль">
                 </div>
+
                 <div class="block_input_repassword_created">
-                    <input type="password" name="repassword" class="password_input" placeholder="Повторите ваш пароль">
+                    <input type="password" id="repassword" onkeyup="return proverka(this);" name="repassword" class="password_input" placeholder="Повторите ваш пароль">
                 </div>
+
                 <div class="btn_login_account_created">
-                    <button type="button" class="btn_login_created">Зарегистрироваться</button>
+                    <button type="button" id="createdbtn" class="btn_login_created" onclick="checkValue()">Зарегистрироваться</button>
                 </div>
             </form>
+
         </div>
     </div>
 </div>
@@ -384,7 +391,6 @@
     <script src="https://unpkg.com/typeit@8.4.0/dist/index.umd.js"></script>
     <script src="src/jquery-3.6.0.min.js"></script>
     <script src="src/app.js"></script>
-
     
 </body>
 </html>

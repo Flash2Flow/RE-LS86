@@ -1,5 +1,3 @@
-  document.addEventListener('DOMContentLoaded', () => {
-    'use strict';
 
   const print = new TypeIt("#section_name_project", {
     //strings: ["los santos 86"],
@@ -90,6 +88,7 @@ $(document).click( function(event){
       $('#no-accepted-block').show(200).delay(3000).slideUp(1000);
       //$('#accepted').show(200).delay(3000).slideUp(1000);
     });
+  
 
     function dev(){
       alert('В разработке, чё лезешь то?');
@@ -114,6 +113,57 @@ window.addEventListener('scroll',function(){
   };
 });
 
+function proverka(input) {
+  input.value = input.value.replace(/[',", А-я]/, '');
+  
+  return false;
+};
 
 
-})
+function checkValue(){
+const login = document.getElementById('login')
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const repassword = document.getElementById('repassword');
+const btnCreated = document.getElementById('createdbtn');
+const inputs = document.getElementsByTagName('input');
+  const warning = document.getElementById('no-accepted-block-registration');
+  const accepted = document.getElementById('accepted-registration');
+  
+
+      if(login.value === "" && password.value === "" & email.value === ""){
+      warning.style.display = 'block';
+      setTimeout(() => warning.style.display = "", 5000)
+      }
+
+      if(login.value.length < 4 || login.value === ''){
+        login.style.border = '2px solid red';
+      }else{
+        login.style.border = '';
+      }
+
+      if(password.value.length < 4 || password.value === ''){
+        password.style.border = '2px solid red';
+      }else{
+        password.style.border = '';
+      }
+
+      if(repassword.value != password.value || repassword.value === ""){
+        repassword.style.border = '2px solid red';
+      }else{
+        repassword.style.border = '';
+      }
+
+      if(email.value.length < 4 || email.value === ''){
+        email.style.border = '2px solid red';
+      }else{
+        email.style.border = '';
+      }
+
+      if(login.value.length > 4 && password.value.length > 4 && repassword.value === password.value  & email.value.length > 4){
+        accepted.style.display = 'block';
+      setTimeout(() => accepted.style.display = "", 5000)
+      }else{
+        accepted.style.display = '';
+      }
+}
