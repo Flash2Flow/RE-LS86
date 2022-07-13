@@ -82,12 +82,6 @@ $(document).click( function(event){
     $("#block_created").hide(300);
     event.stopPropagation();
   });
-
-  
-    $('#various-actions').click(function(){
-      $('#no-accepted-block').show(200).delay(3000).slideUp(1000);
-      //$('#accepted').show(200).delay(3000).slideUp(1000);
-    });
   
 
     function dev(){
@@ -131,7 +125,7 @@ const inputs = document.getElementsByTagName('input');
   const accepted = document.getElementById('accepted-registration');
   
 
-      if(login.value === "" && password.value === "" & email.value === ""){
+      if(login.value === "" && password.value === "" && email.value === ""){
       warning.style.display = 'block';
       setTimeout(() => warning.style.display = "", 5000)
       }
@@ -166,4 +160,35 @@ const inputs = document.getElementsByTagName('input');
       }else{
         accepted.style.display = '';
       }
+}
+
+function checkJoin(){
+  const joinLogin = document.getElementById('login_join');
+  const joinPassword = document.getElementById('password_join');
+  const joinWarning = document.getElementById('no-accepted-block');
+  const joinAccepted = document.getElementById('accepted');
+
+  if(joinLogin.value === '' && joinPassword.value === ''){
+    joinWarning.style.display = 'block';
+      setTimeout(() => joinWarning.style.display = "", 5000)
+  }
+
+  if(joinLogin.value.length < 4 || joinLogin.value === ''){
+    joinLogin.style.border = '2px solid red';
+  }else{
+    joinLogin.style.border = '';
+  }
+
+  if(joinPassword.value.length < 4 || joinPassword.value === ''){
+    joinPassword.style.border = '2px solid red';
+  }else{
+    joinPassword.style.border = '';
+  }
+
+  if(joinLogin.value != '' && joinPassword.value != ''){
+    joinAccepted.style.display = 'block';
+      setTimeout(() => joinAccepted.style.display = "", 5000)
+      }else{
+        joinAccepted.style.display = '';
+  }
 }

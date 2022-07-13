@@ -151,13 +151,13 @@
                     </div>
                     <form class="inputs_block">
                         <div class="block_input_login">
-                            <input type="text" name="login" class="login_input" placeholder="Введите логин">
+                            <input type="text" name="login" onkeyup="return proverka(this);" maxlength="10" id="login_join" class="login_input" placeholder="Введите логин">
                         </div>
                         <div class="block_input_password">
-                            <input type="password" name="password" class="password_input" placeholder="Введите пароль">
+                            <input type="password" name="password" onkeyup="return proverka(this);" maxlength="10" id="password_join" class="password_input" placeholder="Введите пароль">
                         </div>
                         <div class="btn_login_account">
-                            <button type="button" class="btn_login" id="various-actions">Войти</button>
+                            <button type="button" class="btn_login" id="various-actions" onclick="checkJoin();">Войти</button>
                         </div>
                     </form>
                     <div class="new_account">
