@@ -66,6 +66,12 @@ $('#reg').on('click', function(){
   $('#block_join').hide();
   return false;
 })
+$('#open-block-created').on('click',function(){
+  $('#block_created').show();
+  $('#up-block-rule-created').hide();
+
+  return false
+})
 
 $(document).click( function(event){
     if( $(event.target).closest("#block_join").length ) return;
@@ -85,7 +91,7 @@ $(document).click( function(event){
   
 
     function dev(){
-      alert('В разработке, чё лезешь то?');
+      alert('В разработке!');
     }
 
 window.addEventListener('scroll',function(){
@@ -123,12 +129,6 @@ const btnCreated = document.getElementById('createdbtn');
 const inputs = document.getElementsByTagName('input');
   const warning = document.getElementById('no-accepted-block-registration');
   const accepted = document.getElementById('accepted-registration');
-  
-
-      if(login.value === "" && password.value === "" && email.value === ""){
-      warning.style.display = 'block';
-      setTimeout(() => warning.style.display = "", 5000)
-      }
 
       if(login.value.length < 4 || login.value === ''){
         login.style.border = '2px solid red';
@@ -153,13 +153,6 @@ const inputs = document.getElementsByTagName('input');
       }else{
         email.style.border = '';
       }
-
-      if(login.value.length > 4 && password.value.length > 4 && repassword.value === password.value  & email.value.length > 4){
-        accepted.style.display = 'block';
-      setTimeout(() => accepted.style.display = "", 5000)
-      }else{
-        accepted.style.display = '';
-      }
 }
 
 function checkJoin(){
@@ -167,11 +160,6 @@ function checkJoin(){
   const joinPassword = document.getElementById('password_join');
   const joinWarning = document.getElementById('no-accepted-block');
   const joinAccepted = document.getElementById('accepted');
-
-  if(joinLogin.value === '' && joinPassword.value === ''){
-    joinWarning.style.display = 'block';
-      setTimeout(() => joinWarning.style.display = "", 5000)
-  }
 
   if(joinLogin.value.length < 4 || joinLogin.value === ''){
     joinLogin.style.border = '2px solid red';
@@ -183,12 +171,5 @@ function checkJoin(){
     joinPassword.style.border = '2px solid red';
   }else{
     joinPassword.style.border = '';
-  }
-
-  if(joinLogin.value != '' && joinPassword.value != ''){
-    joinAccepted.style.display = 'block';
-      setTimeout(() => joinAccepted.style.display = "", 5000)
-      }else{
-        joinAccepted.style.display = '';
   }
 }
